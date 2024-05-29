@@ -21,7 +21,7 @@ def add_card_to_current_deck(
     Returns:
         Message indicating that the card was successfully saved.
     """
-    browser.configure(browser_engine="chromium", headless=False)
+    browser.configure(browser_engine="chromium", headless=True)
 
     page = browser.goto("https://ankiweb.net/account/login")
     page.fill("input[placeholder='Email']", user_email.value)
@@ -43,7 +43,7 @@ def add_card_to_current_deck(
 def is_card_in_current_deck(
     user_email: Secret, user_password: Secret, search: str
 ) -> str:
-    browser.configure(browser_engine="chromium", headless=False)
+    browser.configure(browser_engine="chromium", headless=True)
 
     page = browser.goto("https://ankiweb.net/account/login")
     page.fill("input[placeholder='Email']", user_email.value)
