@@ -1,0 +1,25 @@
+
+name: Estonian Anki Actions
+
+description: A set of actions to be used by the Estonian Study Helper Agent.
+
+dependencies:
+  conda-forge:
+  - python=3.10.12
+  - uv=0.1.37
+  pypi:
+  - requests=2.31.0
+  - sema4ai-actions=0.8.0
+  - robocorp-browser=2.3.3
+
+packaging:
+  exclude:
+    - ./.git/**
+    - ./.vscode/**
+    - ./devdata/**
+    - ./output/**
+    - ./.DS_store/**
+    - ./venv/**
+    - ./.venv/**
+    - ./**/*.pyc
+    - ./**/*.zip
